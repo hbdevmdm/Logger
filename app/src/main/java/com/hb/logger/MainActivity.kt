@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val logger = Logger(this::class.java.simpleName)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         binding.btnMakeCrash.setOnClickListener {
@@ -26,6 +27,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnCallService.setOnClickListener {
             performLogin()
+        }
+
+        binding.btnCustomLog.setOnClickListener{
+            logger.debugEvent("Custom event", "Log Custom Event")
         }
     }
 
