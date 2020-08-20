@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../HB Android Sample Project.iml" filepath="$PROJECT_DIR$/../HB Android Sample Project.iml" group="HB Android Sample Project" />
+      <module fileurl="file://$PROJECT_DIR$/../app/app.iml" filepath="$PROJECT_DIR$/../app/app.iml" group="HB Android Sample Project/app" />
+      <module fileurl="file://$PROJECT_DIR$/logger.iml" filepath="$PROJECT_DIR$/logger.iml" group="HB Android Sample Project/logger" />
+    </modules>
+  </component>
+</project>

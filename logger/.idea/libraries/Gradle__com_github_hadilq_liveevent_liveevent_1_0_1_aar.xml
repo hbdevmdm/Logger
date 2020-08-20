@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.hadilq.liveevent:liveevent:1.0.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a3418e36394e75e71ca748530fd8012c/liveevent-1.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a3418e36394e75e71ca748530fd8012c/liveevent-1.0.1/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.hadilq.liveevent/liveevent/1.0.1/9d1a411eb10e6d4ecd569b4be503a7cb5c1170d5/liveevent-1.0.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.hadilq.liveevent/liveevent/1.0.1/fd3798184656716328b14dfc81a1f84a4158948c/liveevent-1.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

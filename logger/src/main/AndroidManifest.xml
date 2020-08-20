@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="com.hb.logger">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application >
+
+        <provider
+            android:name="com.hb.logger.util.GenericFileProvider"
+            android:authorities="${applicationId}.com.hb.logger.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/logger_provider_paths" />
+        </provider>
+
+        <activity
+            android:theme="@style/LoggerAppTheme"
+            android:name=".ui.log.LogsListActivity"
+            android:configChanges="screenSize|orientation">
+            
+        </activity>
+
+        <activity
+            android:theme="@style/LoggerAppTheme"
+            android:name=".ui.log.network.NetworkLogDetailActivity"
+            android:configChanges="screenSize|orientation" />
+
+        <activity
+            android:theme="@style/LoggerAppTheme"
+            android:name=".ui.log.custom.CustomLogDetailActivity"
+            android:configChanges="screenSize|orientation" />
+
+        <activity
+            android:theme="@style/LoggerAppTheme"
+            android:name=".ui.log.crash.CrashLogDetailActivity"
+            android:configChanges="screenSize|orientation" />
+
+        <activity
+            android:name=".ui.setting.LogSettingActivity"
+            android:configChanges="screenSize|orientation"
+            android:theme="@style/LoggerAppTheme" />
+
+    </application>
+
+</manifest>

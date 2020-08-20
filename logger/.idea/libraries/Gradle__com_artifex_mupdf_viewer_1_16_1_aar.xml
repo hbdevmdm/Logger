@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.artifex.mupdf:viewer:1.16.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9573df12c57a816cde36b00a27e06a7f/viewer-1.16.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9573df12c57a816cde36b00a27e06a7f/viewer-1.16.1/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

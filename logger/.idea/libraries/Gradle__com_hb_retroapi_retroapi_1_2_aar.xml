@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.hb.retroapi:retroapi:1.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/627193194746b626cc25abf61276f337/retroapi-1.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/627193194746b626cc25abf61276f337/retroapi-1.2/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.hb.retroapi/retroapi/1.2/16599b9ad76d531946ab9554366f4ec5d555286e/retroapi-1.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.hb.retroapi/retroapi/1.2/c487e97d1712fc53b56a216b57d7d1f44f685c3e/retroapi-1.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

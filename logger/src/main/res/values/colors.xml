@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="logger_colorPrimary">#008577</color>
+    <color name="logger_colorPrimaryDark">#000000</color>
+    <color name="logger_colorAccent">#8BF50000</color>
+
+    <color name="colorGreen">#3AA987</color>
+    <color name="colorBlue">#010D47</color>
+    <color name="colorGray">#999999</color>
+    <color name="colorYellow">#FF5722</color>
+    <color name="colorWhite">#FFffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorLightGray">#C9C9C9</color>
+    <color name="colorRed">#FF0000</color>
+    <color name="colorSkyBlue">#1A9BFC</color>
+    <color name="transparent">#00000000</color>
+    <color name="colorDialogTitle">#333333</color>
+    <color name="black_trans">#22000000</color>
+</resources>

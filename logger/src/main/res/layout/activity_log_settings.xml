@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite">
+
+        <RelativeLayout
+            android:id="@+id/rlToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBlack"
+            android:padding="12dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/ic_back"
+                android:background="@null"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:tint="@color/colorWhite"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/logger_log_settings"
+                android:layout_centerInParent="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewOne"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorBlack"
+            android:layout_below="@+id/rlToolbar" />
+
+        <LinearLayout
+            android:id="@+id/llLogging"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/viewOne"
+            android:padding="12dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLogging"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/logger_logging"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchLogging"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:theme="@style/AppSwitchTheme" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewTwo"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorBlack"
+            android:layout_below="@+id/llLogging" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvExportLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/logger_export_log"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            android:layout_below="@id/viewTwo"
+            android:padding="12dp" />
+
+        <View
+            android:id="@+id/viewThree"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorBlack"
+            android:layout_below="@+id/tvExportLog" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvClearData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/logger_clear_data"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            android:layout_below="@id/viewThree"
+            android:padding="12dp" />
+
+        <View
+            android:id="@+id/viewFour"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorBlack"
+            android:layout_below="@+id/tvClearData" />
+
+    </RelativeLayout>
+
+</layout>

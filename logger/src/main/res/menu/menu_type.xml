@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_all"
+        android:title="@string/logger_all"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_network"
+        android:title="@string/logger_network"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_debug"
+        android:title="@string/logger_debug"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_info"
+        android:title="@string/logger_info"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_warning"
+        android:title="@string/logger_warning"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_error"
+        android:title="@string/logger_error"
+        app:showAsAction="never"/>
+</menu>

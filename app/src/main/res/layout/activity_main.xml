@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnCallService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Call Webservice" />
+
+        <Button
+            android:id="@+id/btnMakeCrash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Make Crash" />
+
+        <Button
+            android:id="@+id/btnCustomLog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dump Custom Log" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnGotoLogs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Go to Logs" />
+    </LinearLayout>
+</layout>

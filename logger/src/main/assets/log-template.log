@@ -1,0 +1,19 @@
+API Information
+-------------------------
+[URL]
+%url%
+[METHOD]
+%method%
+[REQUEST DATE]
+%request_date%
+[RESPONSE_DATE]
+%response_date%
+[TIME]
+%time%
+
+
+Request Information
+----------------------------
+
+HEADERS
+
