@@ -17,4 +17,10 @@ interface CrashLogDao {
 
     @Query("select * from crashlog where id = :id")
     fun getCrashLogById(id: Long): CrashLog
+
+    @Query("delete  from crashlog where time > :time")
+    fun deleteAfterTime(time: Long)
+
+    @Query("delete  from crashlog where time < :time")
+    fun deleteBeforeTime(time: Long)
 }

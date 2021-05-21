@@ -17,4 +17,10 @@ interface NetworkLogDao {
 
     @Query("select * from networklog where id = :id")
     fun getNetworkLogById(id: Long): NetworkLog
+
+    @Query("delete  from networklog where requestTime > :time")
+    fun deleteAfterTime(time: Long)
+
+    @Query("delete  from networklog where requestTime < :time")
+    fun deleteBeforeTime(time: Long)
 }
