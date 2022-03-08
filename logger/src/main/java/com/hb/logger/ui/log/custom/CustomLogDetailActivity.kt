@@ -26,8 +26,8 @@ class CustomLogDetailActivity : LogDetailBaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_custom_log_detail)
-        customLog = intent.getParcelableExtra("customLog")
-        eventsSequenceLog = intent.getParcelableExtra("eventSequenceLog")
+        customLog = intent.getParcelableExtra("customLog")!!
+        eventsSequenceLog = intent.getParcelableExtra("eventSequenceLog")!!
 
         handleUiEvents()
         setData()

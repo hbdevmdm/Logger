@@ -20,8 +20,8 @@ class NetworkLogDetailActivity : LogDetailBaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_network_type_detail)
-        networkLog = intent.getParcelableExtra<NetworkLog>("networkLog")
-        eventsSequenceLog = intent.getParcelableExtra("eventSequenceLog")
+        networkLog = intent.getParcelableExtra<NetworkLog>("networkLog")!!
+        eventsSequenceLog = intent.getParcelableExtra("eventSequenceLog")!!
         initComponent()
         handleUiEvents()
     }

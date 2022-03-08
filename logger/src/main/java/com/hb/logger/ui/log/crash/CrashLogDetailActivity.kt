@@ -20,8 +20,8 @@ class CrashLogDetailActivity : LogDetailBaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_crash_type_detail)
-        crashLog = intent.getParcelableExtra("crashLog")
-        eventsSequenceLog = intent.getParcelableExtra("eventSequenceLog")
+        crashLog = intent.getParcelableExtra("crashLog")!!
+        eventsSequenceLog = intent.getParcelableExtra("eventSequenceLog")!!
         initComponent()
         handleUiEvents()
     }
