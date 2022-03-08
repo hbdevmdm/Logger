@@ -48,7 +48,8 @@ class Logger() {
             sessionId = generateSession()
             hasInitialize = true
 
-            database = Room.databaseBuilder(context,
+            database = Room.databaseBuilder(
+                    context,
                     AppDatabase::class.java, "logger"
             ).addMigrations(AppDatabase.MIGRATION_1_2).allowMainThreadQueries().build()
 
@@ -126,14 +127,37 @@ class Logger() {
             this.exceptionCallback = exceptionCallback
         }
 
+        fun deleteDataAfterTime(time: Long) {
+            database?.crashLogDao()?.deleteAfterTime(time)
+            database?.customLogDao()?.deleteAfterTime(time)
+            database?.networkLogDao()?.deleteAfterTime(time)
+            database?.eventsDao()?.deleteAfterTime(time)
+        }
+
+        fun deleteDataBeforeTime(time: Long) {
+            database?.crashLogDao()?.deleteBeforeTime(time)
+            database?.customLogDao()?.deleteBeforeTime(time)
+            database?.networkLogDao()?.deleteBeforeTime(time)
+            database?.eventsDao()?.deleteBeforeTime(time)
+        }
     }
 
 
-    private fun dumpCustomEvent(className: String, method: String, event: String,
-                                eventDescription: String, logType: String, status: String) {
+    private fun dumpCustomEvent(
+            className: String, method: String, event: String,
+            eventDescription: String, logType: String, status: String
+    ) {
         if (hasInitialize) {
             database?.apply {
-                val customLog = CustomLog(className, event, method, eventDescription, System.currentTimeMillis().toString(), user, status)
+                val customLog = CustomLog(
+                        className,
+                        event,
+                        method,
+                        eventDescription,
+                        System.currentTimeMillis().toString(),
+                        user,
+                        status
+                )
                 val rawId = customLogDao().insert(customLog)
 
                 val eventsSequenceLog = EventsSequenceLog()
@@ -168,7 +192,11 @@ class Logger() {
     }
 
 
-    fun dumpCustomEvent(event: String, eventDescription: String, status: String = CustomLog.STATUS_INFO) {
+    fun dumpCustomEvent(
+            event: String,
+            eventDescription: String,
+            status: String = CustomLog.STATUS_INFO
+    ) {
 
         val stacktrace = Thread.currentThread().stackTrace
         val e = stacktrace[3]//maybe this number needs to be corrected
@@ -207,7 +235,12 @@ class Logger() {
                     }
                 }
 
-                val crashLog = CrashLog(throwable.toString(), stringBuilder.toString(), deviceInfoObject.toString(1), System.currentTimeMillis().toString())
+                val crashLog = CrashLog(
+                        throwable.toString(),
+                        stringBuilder.toString(),
+                        deviceInfoObject.toString(1),
+                        System.currentTimeMillis().toString()
+                )
                 val rawId = crashLogDao().insert(crashLog)
 
                 val eventsSequenceLog = EventsSequenceLog()
@@ -220,12 +253,25 @@ class Logger() {
         }
     }
 
-    fun dumpNetworkEvent(reqTime: String, requestUrl: String, requestMethod: String, requestParams: String,
-                         requestHeaders: String, responseTime: String, responseString: String,
-                         responseContentLength: String, responseCode: String, responseContentType: String) {
+    fun dumpNetworkEvent(
+            reqTime: String, requestUrl: String, requestMethod: String, requestParams: String,
+            requestHeaders: String, responseTime: String, responseString: String,
+            responseContentLength: String, responseCode: String, responseContentType: String
+    ) {
         if (hasInitialize) {
             database?.apply {
-                val requestLog = NetworkLog(requestUrl, requestMethod, reqTime, responseTime, responseCode, responseContentType, responseContentLength, requestParams, requestHeaders, responseString)
+                val requestLog = NetworkLog(
+                        requestUrl,
+                        requestMethod,
+                        reqTime,
+                        responseTime,
+                        responseCode,
+                        responseContentType,
+                        responseContentLength,
+                        requestParams,
+                        requestHeaders,
+                        responseString
+                )
                 val rawId = networkLogDao().insert(requestLog)
 
                 val eventsSequenceLog = EventsSequenceLog()
@@ -236,6 +282,8 @@ class Logger() {
                 eventsDao().insert(eventsSequenceLog)
             }
         }
+
     }
+
 
 }

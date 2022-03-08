@@ -14,7 +14,7 @@ import com.hb.logger.data.model.EventsSequenceLog
 import com.hb.logger.data.model.NetworkLog
 
 @Database(entities = [NetworkLog::class, CrashLog::class, CustomLog::class, EventsSequenceLog::class], version = 2)
-abstract class AppDatabase : RoomDatabase() {
+public abstract class AppDatabase : RoomDatabase() {
     abstract fun networkLogDao(): NetworkLogDao
 
     abstract fun customLogDao(): CustomLogDao

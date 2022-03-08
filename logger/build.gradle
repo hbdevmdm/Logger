@@ -3,30 +3,6 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
-ext {
-    bintrayRepo = 'maven'
-    bintrayName = 'logger'
-
-    publishedGroupId = 'com.hb.logger'
-    libraryName = 'logger'
-    artifact = 'logger'
-
-    libraryDescription = 'A clean, minimalistic, easy-to-use and highly customizable pin lock custom view'
-
-    siteUrl = 'https://github.com/mkrupal09/EasyAdapter'
-    gitUrl = 'https://github.com/mkrupal09/EasyAdapter.git'
-
-    libraryVersion = '2.1'
-
-    developerId = 'hbdevmdm'
-    developerName = 'HiddenBrains'
-    developerEmail = 'hbdevmdm@gmail.com'
-
-    licenseName = 'The Apache Software License, Version 2.0'
-    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-    allLicenses = ["Apache-2.0"]
-}
-
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
@@ -63,22 +39,13 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'com.google.android.material:material:1.0.0'
-    implementation "androidx.room:room-runtime:2.2.0"
-    kapt "androidx.room:room-compiler:2.2.0"
-    implementation("com.squareup.okhttp3:okhttp:4.2.1")
-    implementation "androidx.paging:paging-runtime:2.1.0"
-    implementation 'com.master.android:permissionhelper:2.1'
-    implementation 'androidx.paging:paging-runtime-ktx:2.1.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation "androidx.room:room-runtime:2.2.6"
+    kapt "androidx.room:room-compiler:2.2.6"
+    implementation("com.squareup.okhttp3:okhttp:4.9.0")
+    implementation "androidx.paging:paging-runtime:2.1.2"
+    implementation 'com.github.pankaj89:PermissionHelper:2.3'
+    implementation 'androidx.paging:paging-runtime-ktx:2.1.2'
 
-}
-
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
-
-
-bintray {
-    key = '5d1d9971631c5cebde8337a06c71b037f3971b59'
-    user = 'hbdevmdm'
 }

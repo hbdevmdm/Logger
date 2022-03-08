@@ -17,4 +17,10 @@ interface CustomLogDao {
 
     @Query("select * from customlog where id = :id")
     fun getCustomLogById(id: Long): CustomLog
+
+    @Query("delete  from customlog where time > :time")
+    fun deleteAfterTime(time: Long)
+
+    @Query("delete  from customlog where time < :time")
+    fun deleteBeforeTime(time: Long)
 }

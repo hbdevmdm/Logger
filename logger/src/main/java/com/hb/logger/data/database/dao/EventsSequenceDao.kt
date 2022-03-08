@@ -23,4 +23,10 @@ interface EventsSequenceDao {
     @RawQuery(observedEntities = [EventsSequenceLog::class, CrashLog::class, CustomLog::class, NetworkLog::class])
     fun getAllByFilter(supportSqlSQLiteQuery: SupportSQLiteQuery): DataSource.Factory<Int, EventsSequenceLog>
 
+    @Query("delete  from eventssequencelog where time > :time")
+    fun deleteAfterTime(time: Long)
+
+    @Query("delete  from eventssequencelog where time < :time")
+    fun deleteBeforeTime(time: Long)
+
 }
